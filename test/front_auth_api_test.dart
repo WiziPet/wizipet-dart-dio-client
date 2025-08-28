@@ -4,7 +4,9 @@ import 'package:wizipet_api/wizipet_api.dart';
 
 /// tests for FrontAuthApi
 void main() {
-  final instance = WizipetApi().getFrontAuthApi();
+  final instance = WizipetApi(
+    basePathOverride: 'https://feelinkpet-api-dev.azurewebsites.net'
+  ).getFrontAuthApi();
 
   group(FrontAuthApi, () {
     // 
@@ -18,7 +20,7 @@ void main() {
     //
     //Future<WpResponseAuthTokensResponse> apiV1FrontAuthLoginPost({ AuthLoginUserRequest authLoginUserRequest }) async
     test('test apiV1FrontAuthLoginPost', () async {
-      // TODO
+      instance
     });
 
     // Error codes :    - WEAK_PASSWORD:    - PASSWORD_AUTH_NOT_USED:    - ACCOUNT_NOT_FOUND: 

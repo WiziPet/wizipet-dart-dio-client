@@ -4,7 +4,6 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
@@ -12,7 +11,6 @@ import 'package:wizipet_api/src/api_util.dart';
 import 'package:wizipet_api/src/model/common_list_pet_likes_dto.dart';
 import 'package:wizipet_api/src/model/encyclopedies_unified_article_categorie_dto.dart';
 import 'package:wizipet_api/src/model/profiles_espece_dto.dart';
-import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_common_item_like_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_common_list_pet_likes_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_encyclopedies_front_article_dto.dart';
