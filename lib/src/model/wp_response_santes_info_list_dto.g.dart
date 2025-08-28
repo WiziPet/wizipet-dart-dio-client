@@ -1,0 +1,145 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'wp_response_santes_info_list_dto.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+class _$WpResponseSantesInfoListDto extends WpResponseSantesInfoListDto {
+  @override
+  final SantesInfoListDto? data;
+  @override
+  final bool? isSuccess;
+  @override
+  final String? errorCode;
+  @override
+  final String? errorMessage;
+
+  factory _$WpResponseSantesInfoListDto(
+          [void Function(WpResponseSantesInfoListDtoBuilder)? updates]) =>
+      (WpResponseSantesInfoListDtoBuilder()..update(updates))._build();
+
+  _$WpResponseSantesInfoListDto._(
+      {this.data, this.isSuccess, this.errorCode, this.errorMessage})
+      : super._();
+  @override
+  WpResponseSantesInfoListDto rebuild(
+          void Function(WpResponseSantesInfoListDtoBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  WpResponseSantesInfoListDtoBuilder toBuilder() =>
+      WpResponseSantesInfoListDtoBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is WpResponseSantesInfoListDto &&
+        data == other.data &&
+        isSuccess == other.isSuccess &&
+        errorCode == other.errorCode &&
+        errorMessage == other.errorMessage;
+  }
+
+  @override
+  int get hashCode {
+    var _$hash = 0;
+    _$hash = $jc(_$hash, data.hashCode);
+    _$hash = $jc(_$hash, isSuccess.hashCode);
+    _$hash = $jc(_$hash, errorCode.hashCode);
+    _$hash = $jc(_$hash, errorMessage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper(r'WpResponseSantesInfoListDto')
+          ..add('data', data)
+          ..add('isSuccess', isSuccess)
+          ..add('errorCode', errorCode)
+          ..add('errorMessage', errorMessage))
+        .toString();
+  }
+}
+
+class WpResponseSantesInfoListDtoBuilder
+    implements
+        Builder<WpResponseSantesInfoListDto,
+            WpResponseSantesInfoListDtoBuilder> {
+  _$WpResponseSantesInfoListDto? _$v;
+
+  SantesInfoListDtoBuilder? _data;
+  SantesInfoListDtoBuilder get data =>
+      _$this._data ??= SantesInfoListDtoBuilder();
+  set data(SantesInfoListDtoBuilder? data) => _$this._data = data;
+
+  bool? _isSuccess;
+  bool? get isSuccess => _$this._isSuccess;
+  set isSuccess(bool? isSuccess) => _$this._isSuccess = isSuccess;
+
+  String? _errorCode;
+  String? get errorCode => _$this._errorCode;
+  set errorCode(String? errorCode) => _$this._errorCode = errorCode;
+
+  String? _errorMessage;
+  String? get errorMessage => _$this._errorMessage;
+  set errorMessage(String? errorMessage) => _$this._errorMessage = errorMessage;
+
+  WpResponseSantesInfoListDtoBuilder() {
+    WpResponseSantesInfoListDto._defaults(this);
+  }
+
+  WpResponseSantesInfoListDtoBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _data = $v.data?.toBuilder();
+      _isSuccess = $v.isSuccess;
+      _errorCode = $v.errorCode;
+      _errorMessage = $v.errorMessage;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(WpResponseSantesInfoListDto other) {
+    _$v = other as _$WpResponseSantesInfoListDto;
+  }
+
+  @override
+  void update(void Function(WpResponseSantesInfoListDtoBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  WpResponseSantesInfoListDto build() => _build();
+
+  _$WpResponseSantesInfoListDto _build() {
+    _$WpResponseSantesInfoListDto _$result;
+    try {
+      _$result = _$v ??
+          _$WpResponseSantesInfoListDto._(
+            data: _data?.build(),
+            isSuccess: isSuccess,
+            errorCode: errorCode,
+            errorMessage: errorMessage,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'data';
+        _data?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+            r'WpResponseSantesInfoListDto', _$failedField, e.toString());
+      }
+      rethrow;
+    }
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint
