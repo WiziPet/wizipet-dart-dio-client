@@ -1,0 +1,165 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+
+// ignore_for_file: unused_element
+import 'package:wizipet_api/src/model/santes_operation_dto.dart';
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+
+part 'wp_response_santes_operation_dto.g.dart';
+
+/// WpResponseSantesOperationDto
+///
+/// Properties:
+/// * [data] 
+/// * [isSuccess] 
+/// * [errorCode] 
+/// * [errorMessage] 
+@BuiltValue()
+abstract class WpResponseSantesOperationDto implements Built<WpResponseSantesOperationDto, WpResponseSantesOperationDtoBuilder> {
+  @BuiltValueField(wireName: r'data')
+  SantesOperationDto? get data;
+
+  @BuiltValueField(wireName: r'is_success')
+  bool? get isSuccess;
+
+  @BuiltValueField(wireName: r'error_code')
+  String? get errorCode;
+
+  @BuiltValueField(wireName: r'error_message')
+  String? get errorMessage;
+
+  WpResponseSantesOperationDto._();
+
+  factory WpResponseSantesOperationDto([void updates(WpResponseSantesOperationDtoBuilder b)]) = _$WpResponseSantesOperationDto;
+
+  @BuiltValueHook(initializeBuilder: true)
+  static void _defaults(WpResponseSantesOperationDtoBuilder b) => b;
+
+  @BuiltValueSerializer(custom: true)
+  static Serializer<WpResponseSantesOperationDto> get serializer => _$WpResponseSantesOperationDtoSerializer();
+}
+
+class _$WpResponseSantesOperationDtoSerializer implements PrimitiveSerializer<WpResponseSantesOperationDto> {
+  @override
+  final Iterable<Type> types = const [WpResponseSantesOperationDto, _$WpResponseSantesOperationDto];
+
+  @override
+  final String wireName = r'WpResponseSantesOperationDto';
+
+  Iterable<Object?> _serializeProperties(
+    Serializers serializers,
+    WpResponseSantesOperationDto object, {
+    FullType specifiedType = FullType.unspecified,
+  }) sync* {
+    if (object.data != null) {
+      yield r'data';
+      yield serializers.serialize(
+        object.data,
+        specifiedType: const FullType(SantesOperationDto),
+      );
+    }
+    if (object.isSuccess != null) {
+      yield r'is_success';
+      yield serializers.serialize(
+        object.isSuccess,
+        specifiedType: const FullType(bool),
+      );
+    }
+    if (object.errorCode != null) {
+      yield r'error_code';
+      yield serializers.serialize(
+        object.errorCode,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.errorMessage != null) {
+      yield r'error_message';
+      yield serializers.serialize(
+        object.errorMessage,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+  }
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    WpResponseSantesOperationDto object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+  }
+
+  void _deserializeProperties(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+    required List<Object?> serializedList,
+    required WpResponseSantesOperationDtoBuilder result,
+    required List<Object?> unhandled,
+  }) {
+    for (var i = 0; i < serializedList.length; i += 2) {
+      final key = serializedList[i] as String;
+      final value = serializedList[i + 1];
+      switch (key) {
+        case r'data':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(SantesOperationDto),
+          ) as SantesOperationDto;
+          result.data.replace(valueDes);
+          break;
+        case r'is_success':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.isSuccess = valueDes;
+          break;
+        case r'error_code':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.errorCode = valueDes;
+          break;
+        case r'error_message':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.errorMessage = valueDes;
+          break;
+        default:
+          unhandled.add(key);
+          unhandled.add(value);
+          break;
+      }
+    }
+  }
+
+  @override
+  WpResponseSantesOperationDto deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    final result = WpResponseSantesOperationDtoBuilder();
+    final serializedList = (serialized as Iterable<Object?>).toList();
+    final unhandled = <Object?>[];
+    _deserializeProperties(
+      serializers,
+      serialized,
+      specifiedType: specifiedType,
+      serializedList: serializedList,
+      unhandled: unhandled,
+      result: result,
+    );
+    return result.build();
+  }
+}
+
