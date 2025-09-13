@@ -4,11 +4,13 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
-import 'package:wizipet_api/src/model/list_response_santes_historique_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_historique_dto.dart';
+import 'package:wizipet_api/src/model/wp_response.dart';
 
 class FrontHistoriqueApi {
 
@@ -30,9 +32,9 @@ class FrontHistoriqueApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseSantesHistoriqueDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseSantesHistoriqueDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseSantesHistoriqueDto>> apiV1FrontProfilePetIdHistoriquesActiviteGet({ 
+  Future<Response<WpListResponseSantesHistoriqueDto>> apiV1FrontProfilePetIdHistoriquesActiviteGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -68,14 +70,14 @@ class FrontHistoriqueApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseSantesHistoriqueDto? _responseData;
+    WpListResponseSantesHistoriqueDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseSantesHistoriqueDto),
-      ) as ListResponseSantesHistoriqueDto;
+        specifiedType: const FullType(WpListResponseSantesHistoriqueDto),
+      ) as WpListResponseSantesHistoriqueDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -87,7 +89,7 @@ class FrontHistoriqueApi {
       );
     }
 
-    return Response<ListResponseSantesHistoriqueDto>(
+    return Response<WpListResponseSantesHistoriqueDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -111,9 +113,9 @@ class FrontHistoriqueApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseSantesHistoriqueDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseSantesHistoriqueDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseSantesHistoriqueDto>> apiV1FrontProfilePetIdHistoriquesAlimentationsGet({ 
+  Future<Response<WpListResponseSantesHistoriqueDto>> apiV1FrontProfilePetIdHistoriquesAlimentationsGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -149,14 +151,14 @@ class FrontHistoriqueApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseSantesHistoriqueDto? _responseData;
+    WpListResponseSantesHistoriqueDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseSantesHistoriqueDto),
-      ) as ListResponseSantesHistoriqueDto;
+        specifiedType: const FullType(WpListResponseSantesHistoriqueDto),
+      ) as WpListResponseSantesHistoriqueDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -168,7 +170,7 @@ class FrontHistoriqueApi {
       );
     }
 
-    return Response<ListResponseSantesHistoriqueDto>(
+    return Response<WpListResponseSantesHistoriqueDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -192,9 +194,9 @@ class FrontHistoriqueApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseSantesHistoriqueDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseSantesHistoriqueDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseSantesHistoriqueDto>> apiV1FrontProfilePetIdHistoriquesPoidsGet({ 
+  Future<Response<WpListResponseSantesHistoriqueDto>> apiV1FrontProfilePetIdHistoriquesPoidsGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -230,14 +232,14 @@ class FrontHistoriqueApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseSantesHistoriqueDto? _responseData;
+    WpListResponseSantesHistoriqueDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseSantesHistoriqueDto),
-      ) as ListResponseSantesHistoriqueDto;
+        specifiedType: const FullType(WpListResponseSantesHistoriqueDto),
+      ) as WpListResponseSantesHistoriqueDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -249,7 +251,7 @@ class FrontHistoriqueApi {
       );
     }
 
-    return Response<ListResponseSantesHistoriqueDto>(
+    return Response<WpListResponseSantesHistoriqueDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

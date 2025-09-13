@@ -81,29 +81,7 @@ import 'package:wizipet_api/src/model/groups_group_dto.dart';
 import 'package:wizipet_api/src/model/groups_group_item_dto.dart';
 import 'package:wizipet_api/src/model/groups_pet_summary_dto.dart';
 import 'package:wizipet_api/src/model/groups_update_group_dto.dart';
-import 'package:wizipet_api/src/model/list_response_accueil_assistant_personnel_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_antiparasitaires_antiparasitaire_dto.dart';
-import 'package:wizipet_api/src/model/list_response_cartes_pet_friendly_location_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_cartes_pet_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_cartes_user_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_contacts_contact_summary_dto.dart';
-import 'package:wizipet_api/src/model/list_response_discussions_discussion_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_groups_group_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_pense_betes_pense_bete_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_places_animaute_local_page_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_places_expedia_hotel_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_places_place_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_profiles_pet_race_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_company_assurance_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_historique_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_infos_medicales_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_medicamentation_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_operation_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_pathologie_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_sickness_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_vaccins_vaccination_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_vermifuges_vermifuge_dto.dart';
-import 'package:wizipet_api/src/model/list_response_warns_warn_item_dto.dart';
+import 'package:wizipet_api/src/model/media_image_file_dto.dart';
 import 'package:wizipet_api/src/model/medias_image_aspect_dto.dart';
 import 'package:wizipet_api/src/model/medias_video_dto.dart';
 import 'package:wizipet_api/src/model/medias_video_transcoding_status_dto.dart';
@@ -253,6 +231,29 @@ import 'package:wizipet_api/src/model/versions_version_dto.dart';
 import 'package:wizipet_api/src/model/warns_warn_item_dto.dart';
 import 'package:wizipet_api/src/model/warns_warn_item_group_dto.dart';
 import 'package:wizipet_api/src/model/warns_warn_type_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_accueil_assistant_personnel_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_antiparasitaires_antiparasitaire_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_cartes_pet_friendly_location_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_cartes_pet_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_cartes_user_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_contacts_contact_summary_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_discussions_discussion_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_groups_group_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_pense_betes_pense_bete_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_places_animaute_local_page_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_places_expedia_hotel_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_places_place_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_profiles_pet_race_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_company_assurance_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_historique_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_infos_medicales_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_medicamentation_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_operation_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_pathologie_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_sickness_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_vaccins_vaccination_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_vermifuges_vermifuge_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_warns_warn_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_auth_me_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_auth_tokens_response.dart';
@@ -265,6 +266,7 @@ import 'package:wizipet_api/src/model/wp_response_common_list_pet_likes_dto.dart
 import 'package:wizipet_api/src/model/wp_response_create_reply_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_discussions_discussion_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_encyclopedies_front_article_dto.dart';
+import 'package:wizipet_api/src/model/wp_response_media_image_file_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_pense_betes_pense_bete_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_profiles_my_profile_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_profiles_my_profiles_list_dto.dart';
@@ -360,29 +362,7 @@ part 'serializers.g.dart';
   GroupsGroupItemDto,
   GroupsPetSummaryDto,
   GroupsUpdateGroupDto,
-  ListResponseAccueilAssistantPersonnelItemDto,
-  ListResponseAntiparasitairesAntiparasitaireDto,
-  ListResponseCartesPetFriendlyLocationItemDto,
-  ListResponseCartesPetItemDto,
-  ListResponseCartesUserItemDto,
-  ListResponseContactsContactSummaryDto,
-  ListResponseDiscussionsDiscussionItemDto,
-  ListResponseGroupsGroupItemDto,
-  ListResponsePenseBetesPenseBeteItemDto,
-  ListResponsePlacesAnimauteLocalPageItemDto,
-  ListResponsePlacesExpediaHotelItemDto,
-  ListResponsePlacesPlaceItemDto,
-  ListResponseProfilesPetRaceItemDto,
-  ListResponseSantesCompanyAssuranceDto,
-  ListResponseSantesHistoriqueDto,
-  ListResponseSantesInfosMedicalesItemDto,
-  ListResponseSantesMedicamentationItemDto,
-  ListResponseSantesOperationItemDto,
-  ListResponseSantesPathologieDto,
-  ListResponseSantesSicknessItemDto,
-  ListResponseVaccinsVaccinationItemDto,
-  ListResponseVermifugesVermifugeDto,
-  ListResponseWarnsWarnItemDto,
+  MediaImageFileDto,
   MediasImageAspectDto,
   MediasVideoDto,
   MediasVideoTranscodingStatusDto,
@@ -532,6 +512,29 @@ part 'serializers.g.dart';
   WarnsWarnItemDto,
   WarnsWarnItemGroupDto,
   WarnsWarnTypeDto,
+  WpListResponseAccueilAssistantPersonnelItemDto,
+  WpListResponseAntiparasitairesAntiparasitaireDto,
+  WpListResponseCartesPetFriendlyLocationItemDto,
+  WpListResponseCartesPetItemDto,
+  WpListResponseCartesUserItemDto,
+  WpListResponseContactsContactSummaryDto,
+  WpListResponseDiscussionsDiscussionItemDto,
+  WpListResponseGroupsGroupItemDto,
+  WpListResponsePenseBetesPenseBeteItemDto,
+  WpListResponsePlacesAnimauteLocalPageItemDto,
+  WpListResponsePlacesExpediaHotelItemDto,
+  WpListResponsePlacesPlaceItemDto,
+  WpListResponseProfilesPetRaceItemDto,
+  WpListResponseSantesCompanyAssuranceDto,
+  WpListResponseSantesHistoriqueDto,
+  WpListResponseSantesInfosMedicalesItemDto,
+  WpListResponseSantesMedicamentationItemDto,
+  WpListResponseSantesOperationItemDto,
+  WpListResponseSantesPathologieDto,
+  WpListResponseSantesSicknessItemDto,
+  WpListResponseVaccinsVaccinationItemDto,
+  WpListResponseVermifugesVermifugeDto,
+  WpListResponseWarnsWarnItemDto,
   WpResponse,
   WpResponseAuthMeDto,
   WpResponseAuthTokensResponse,
@@ -544,6 +547,7 @@ part 'serializers.g.dart';
   WpResponseCreateReplyDto,
   WpResponseDiscussionsDiscussionDto,
   WpResponseEncyclopediesFrontArticleDto,
+  WpResponseMediaImageFileDto,
   WpResponsePenseBetesPenseBeteDto,
   WpResponseProfilesMyProfileItemDto,
   WpResponseProfilesMyProfilesListDto,

@@ -4,12 +4,13 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
-import 'package:wizipet_api/src/model/list_response_pense_betes_pense_bete_item_dto.dart';
 import 'package:wizipet_api/src/model/pense_betes_patch_pense_bete_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_pense_betes_pense_bete_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_pense_betes_pense_bete_dto.dart';
 
@@ -33,9 +34,9 @@ class FrontPenseBeteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponsePenseBetesPenseBeteItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponsePenseBetesPenseBeteItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponsePenseBetesPenseBeteItemDto>> apiV1FrontProfilePetIdSantesPensebetesGet({ 
+  Future<Response<WpListResponsePenseBetesPenseBeteItemDto>> apiV1FrontProfilePetIdSantesPensebetesGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -71,14 +72,14 @@ class FrontPenseBeteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponsePenseBetesPenseBeteItemDto? _responseData;
+    WpListResponsePenseBetesPenseBeteItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponsePenseBetesPenseBeteItemDto),
-      ) as ListResponsePenseBetesPenseBeteItemDto;
+        specifiedType: const FullType(WpListResponsePenseBetesPenseBeteItemDto),
+      ) as WpListResponsePenseBetesPenseBeteItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -90,7 +91,7 @@ class FrontPenseBeteApi {
       );
     }
 
-    return Response<ListResponsePenseBetesPenseBeteItemDto>(
+    return Response<WpListResponsePenseBetesPenseBeteItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

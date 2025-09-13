@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontProfilePetIdWarnsGet**
-> ListResponseWarnsWarnItemDto apiV1FrontProfilePetIdWarnsGet(petId)
+> WpListResponseWarnsWarnItemDto apiV1FrontProfilePetIdWarnsGet(petId)
 
 
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseWarnsWarnItemDto**](ListResponseWarnsWarnItemDto.md)
+[**WpListResponseWarnsWarnItemDto**](WpListResponseWarnsWarnItemDto.md)
 
 ### Authorization
 

@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdContactSummaryGet**
-> ListResponseContactsContactSummaryDto apiV1FrontProfilePetIdContactSummaryGet(petId)
+> WpListResponseContactsContactSummaryDto apiV1FrontProfilePetIdContactSummaryGet(petId)
 
 
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseContactsContactSummaryDto**](ListResponseContactsContactSummaryDto.md)
+[**WpListResponseContactsContactSummaryDto**](WpListResponseContactsContactSummaryDto.md)
 
 ### Authorization
 

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontAntiparasitairesGet**
-> ListResponseAntiparasitairesAntiparasitaireDto apiV1FrontAntiparasitairesGet()
+> WpListResponseAntiparasitairesAntiparasitaireDto apiV1FrontAntiparasitairesGet()
 
 
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ListResponseAntiparasitairesAntiparasitaireDto**](ListResponseAntiparasitairesAntiparasitaireDto.md)
+[**WpListResponseAntiparasitairesAntiparasitaireDto**](WpListResponseAntiparasitairesAntiparasitaireDto.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdSantesAntiparasitairesMedicamentationsGet**
-> ListResponseSantesMedicamentationItemDto apiV1FrontProfilePetIdSantesAntiparasitairesMedicamentationsGet(petId)
+> WpListResponseSantesMedicamentationItemDto apiV1FrontProfilePetIdSantesAntiparasitairesMedicamentationsGet(petId)
 
 
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseSantesMedicamentationItemDto**](ListResponseSantesMedicamentationItemDto.md)
+[**WpListResponseSantesMedicamentationItemDto**](WpListResponseSantesMedicamentationItemDto.md)
 
 ### Authorization
 

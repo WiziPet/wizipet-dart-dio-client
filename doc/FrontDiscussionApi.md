@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdDiscussionsGet**
-> ListResponseDiscussionsDiscussionItemDto apiV1FrontProfilePetIdDiscussionsGet(petId)
+> WpListResponseDiscussionsDiscussionItemDto apiV1FrontProfilePetIdDiscussionsGet(petId)
 
 
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseDiscussionsDiscussionItemDto**](ListResponseDiscussionsDiscussionItemDto.md)
+[**WpListResponseDiscussionsDiscussionItemDto**](WpListResponseDiscussionsDiscussionItemDto.md)
 
 ### Authorization
 

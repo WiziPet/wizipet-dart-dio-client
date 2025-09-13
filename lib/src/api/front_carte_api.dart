@@ -4,6 +4,7 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
@@ -12,16 +13,16 @@ import 'package:wizipet_api/src/model/cartes_list_profiles_param_dto.dart';
 import 'package:wizipet_api/src/model/cartes_list_users_param_dto.dart';
 import 'package:wizipet_api/src/model/cartes_post_pet_friendly_location_param_dto.dart';
 import 'package:wizipet_api/src/model/cartes_put_position_dto.dart';
-import 'package:wizipet_api/src/model/list_response_cartes_pet_friendly_location_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_cartes_pet_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_cartes_user_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_places_animaute_local_page_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_places_expedia_hotel_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_places_place_item_dto.dart';
 import 'package:wizipet_api/src/model/medias_image_aspect_dto.dart';
 import 'package:wizipet_api/src/model/places_list_expedia_hotel_search_dto.dart';
 import 'package:wizipet_api/src/model/places_list_places_dto.dart';
 import 'package:wizipet_api/src/model/places_list_places_from_bounds_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_cartes_pet_friendly_location_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_cartes_pet_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_cartes_user_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_places_animaute_local_page_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_places_expedia_hotel_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_places_place_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_cartes_geocode_results_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_cartes_pet_friendly_place_details_dto.dart';
@@ -50,9 +51,9 @@ class FrontCarteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponsePlacesAnimauteLocalPageItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponsePlacesAnimauteLocalPageItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponsePlacesAnimauteLocalPageItemDto>> apiV1FrontCartesAnimauteLocalPagesPost({ 
+  Future<Response<WpListResponsePlacesAnimauteLocalPageItemDto>> apiV1FrontCartesAnimauteLocalPagesPost({ 
     PlacesListPlacesFromBoundsDto? placesListPlacesFromBoundsDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -108,14 +109,14 @@ class FrontCarteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponsePlacesAnimauteLocalPageItemDto? _responseData;
+    WpListResponsePlacesAnimauteLocalPageItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponsePlacesAnimauteLocalPageItemDto),
-      ) as ListResponsePlacesAnimauteLocalPageItemDto;
+        specifiedType: const FullType(WpListResponsePlacesAnimauteLocalPageItemDto),
+      ) as WpListResponsePlacesAnimauteLocalPageItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -127,7 +128,7 @@ class FrontCarteApi {
       );
     }
 
-    return Response<ListResponsePlacesAnimauteLocalPageItemDto>(
+    return Response<WpListResponsePlacesAnimauteLocalPageItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -151,9 +152,9 @@ class FrontCarteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponsePlacesExpediaHotelItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponsePlacesExpediaHotelItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponsePlacesExpediaHotelItemDto>> apiV1FrontCartesExpediaHotelsPost({ 
+  Future<Response<WpListResponsePlacesExpediaHotelItemDto>> apiV1FrontCartesExpediaHotelsPost({ 
     PlacesListExpediaHotelSearchDto? placesListExpediaHotelSearchDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -209,14 +210,14 @@ class FrontCarteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponsePlacesExpediaHotelItemDto? _responseData;
+    WpListResponsePlacesExpediaHotelItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponsePlacesExpediaHotelItemDto),
-      ) as ListResponsePlacesExpediaHotelItemDto;
+        specifiedType: const FullType(WpListResponsePlacesExpediaHotelItemDto),
+      ) as WpListResponsePlacesExpediaHotelItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -228,7 +229,7 @@ class FrontCarteApi {
       );
     }
 
-    return Response<ListResponsePlacesExpediaHotelItemDto>(
+    return Response<WpListResponsePlacesExpediaHotelItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -338,9 +339,9 @@ class FrontCarteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseCartesPetItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseCartesPetItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseCartesPetItemDto>> apiV1FrontCartesPetsPerdusPost({ 
+  Future<Response<WpListResponseCartesPetItemDto>> apiV1FrontCartesPetsPerdusPost({ 
     CartesListProfilesParamDto? cartesListProfilesParamDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -396,14 +397,14 @@ class FrontCarteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseCartesPetItemDto? _responseData;
+    WpListResponseCartesPetItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseCartesPetItemDto),
-      ) as ListResponseCartesPetItemDto;
+        specifiedType: const FullType(WpListResponseCartesPetItemDto),
+      ) as WpListResponseCartesPetItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -415,7 +416,7 @@ class FrontCarteApi {
       );
     }
 
-    return Response<ListResponseCartesPetItemDto>(
+    return Response<WpListResponseCartesPetItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -520,9 +521,9 @@ class FrontCarteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseCartesPetFriendlyLocationItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseCartesPetFriendlyLocationItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseCartesPetFriendlyLocationItemDto>> apiV1FrontCartesPlacesPetFriendlyPost({ 
+  Future<Response<WpListResponseCartesPetFriendlyLocationItemDto>> apiV1FrontCartesPlacesPetFriendlyPost({ 
     PlacesListPlacesFromBoundsDto? placesListPlacesFromBoundsDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -578,14 +579,14 @@ class FrontCarteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseCartesPetFriendlyLocationItemDto? _responseData;
+    WpListResponseCartesPetFriendlyLocationItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseCartesPetFriendlyLocationItemDto),
-      ) as ListResponseCartesPetFriendlyLocationItemDto;
+        specifiedType: const FullType(WpListResponseCartesPetFriendlyLocationItemDto),
+      ) as WpListResponseCartesPetFriendlyLocationItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -597,7 +598,7 @@ class FrontCarteApi {
       );
     }
 
-    return Response<ListResponseCartesPetFriendlyLocationItemDto>(
+    return Response<WpListResponseCartesPetFriendlyLocationItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -702,9 +703,9 @@ class FrontCarteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponsePlacesPlaceItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponsePlacesPlaceItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponsePlacesPlaceItemDto>> apiV1FrontCartesPlacesPost({ 
+  Future<Response<WpListResponsePlacesPlaceItemDto>> apiV1FrontCartesPlacesPost({ 
     PlacesListPlacesDto? placesListPlacesDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -760,14 +761,14 @@ class FrontCarteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponsePlacesPlaceItemDto? _responseData;
+    WpListResponsePlacesPlaceItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponsePlacesPlaceItemDto),
-      ) as ListResponsePlacesPlaceItemDto;
+        specifiedType: const FullType(WpListResponsePlacesPlaceItemDto),
+      ) as WpListResponsePlacesPlaceItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -779,7 +780,7 @@ class FrontCarteApi {
       );
     }
 
-    return Response<ListResponsePlacesPlaceItemDto>(
+    return Response<WpListResponsePlacesPlaceItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1167,9 +1168,9 @@ class FrontCarteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseCartesUserItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseCartesUserItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseCartesUserItemDto>> apiV1FrontCartesUsersPost({ 
+  Future<Response<WpListResponseCartesUserItemDto>> apiV1FrontCartesUsersPost({ 
     CartesListUsersParamDto? cartesListUsersParamDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1225,14 +1226,14 @@ class FrontCarteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseCartesUserItemDto? _responseData;
+    WpListResponseCartesUserItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseCartesUserItemDto),
-      ) as ListResponseCartesUserItemDto;
+        specifiedType: const FullType(WpListResponseCartesUserItemDto),
+      ) as WpListResponseCartesUserItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1244,7 +1245,7 @@ class FrontCarteApi {
       );
     }
 
-    return Response<ListResponseCartesUserItemDto>(
+    return Response<WpListResponseCartesUserItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontProfilePetIdAccueilAssistantPersonnelGet**
-> ListResponseAccueilAssistantPersonnelItemDto apiV1FrontProfilePetIdAccueilAssistantPersonnelGet(petId)
+> WpListResponseAccueilAssistantPersonnelItemDto apiV1FrontProfilePetIdAccueilAssistantPersonnelGet(petId)
 
 
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseAccueilAssistantPersonnelItemDto**](ListResponseAccueilAssistantPersonnelItemDto.md)
+[**WpListResponseAccueilAssistantPersonnelItemDto**](WpListResponseAccueilAssistantPersonnelItemDto.md)
 
 ### Authorization
 

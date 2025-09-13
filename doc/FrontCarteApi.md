@@ -29,7 +29,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontCartesAnimauteLocalPagesPost**
-> ListResponsePlacesAnimauteLocalPageItemDto apiV1FrontCartesAnimauteLocalPagesPost(placesListPlacesFromBoundsDto)
+> WpListResponsePlacesAnimauteLocalPageItemDto apiV1FrontCartesAnimauteLocalPagesPost(placesListPlacesFromBoundsDto)
 
 
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponsePlacesAnimauteLocalPageItemDto**](ListResponsePlacesAnimauteLocalPageItemDto.md)
+[**WpListResponsePlacesAnimauteLocalPageItemDto**](WpListResponsePlacesAnimauteLocalPageItemDto.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontCartesExpediaHotelsPost**
-> ListResponsePlacesExpediaHotelItemDto apiV1FrontCartesExpediaHotelsPost(placesListExpediaHotelSearchDto)
+> WpListResponsePlacesExpediaHotelItemDto apiV1FrontCartesExpediaHotelsPost(placesListExpediaHotelSearchDto)
 
 
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponsePlacesExpediaHotelItemDto**](ListResponsePlacesExpediaHotelItemDto.md)
+[**WpListResponsePlacesExpediaHotelItemDto**](WpListResponsePlacesExpediaHotelItemDto.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontCartesPetsPerdusPost**
-> ListResponseCartesPetItemDto apiV1FrontCartesPetsPerdusPost(cartesListProfilesParamDto)
+> WpListResponseCartesPetItemDto apiV1FrontCartesPetsPerdusPost(cartesListProfilesParamDto)
 
 Obtient les profils des animaux perdus dans une zone géographique donnée.
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseCartesPetItemDto**](ListResponseCartesPetItemDto.md)
+[**WpListResponseCartesPetItemDto**](WpListResponseCartesPetItemDto.md)
 
 ### Authorization
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontCartesPlacesPetFriendlyPost**
-> ListResponseCartesPetFriendlyLocationItemDto apiV1FrontCartesPlacesPetFriendlyPost(placesListPlacesFromBoundsDto)
+> WpListResponseCartesPetFriendlyLocationItemDto apiV1FrontCartesPlacesPetFriendlyPost(placesListPlacesFromBoundsDto)
 
 
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseCartesPetFriendlyLocationItemDto**](ListResponseCartesPetFriendlyLocationItemDto.md)
+[**WpListResponseCartesPetFriendlyLocationItemDto**](WpListResponseCartesPetFriendlyLocationItemDto.md)
 
 ### Authorization
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontCartesPlacesPost**
-> ListResponsePlacesPlaceItemDto apiV1FrontCartesPlacesPost(placesListPlacesDto)
+> WpListResponsePlacesPlaceItemDto apiV1FrontCartesPlacesPost(placesListPlacesDto)
 
 
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponsePlacesPlaceItemDto**](ListResponsePlacesPlaceItemDto.md)
+[**WpListResponsePlacesPlaceItemDto**](WpListResponsePlacesPlaceItemDto.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontCartesUsersPost**
-> ListResponseCartesUserItemDto apiV1FrontCartesUsersPost(cartesListUsersParamDto)
+> WpListResponseCartesUserItemDto apiV1FrontCartesUsersPost(cartesListUsersParamDto)
 
 Obtient les utilisateurs partageant leur position et leurs profils (non perdus), exclus l'utilisateur couramment identifié.
 
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseCartesUserItemDto**](ListResponseCartesUserItemDto.md)
+[**WpListResponseCartesUserItemDto**](WpListResponseCartesUserItemDto.md)
 
 ### Authorization
 

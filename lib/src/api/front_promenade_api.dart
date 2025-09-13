@@ -4,12 +4,14 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
 import 'package:wizipet_api/src/model/promenades_patch_promenade_dto.dart';
 import 'package:wizipet_api/src/model/promenades_post_promenade_dto.dart';
+import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_create_reply_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_promenades_promenade_dto.dart';
 

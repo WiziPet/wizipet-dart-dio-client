@@ -4,12 +4,14 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
 import 'package:wizipet_api/src/model/profiles_espece_dto.dart';
 import 'package:wizipet_api/src/model/resumable_list_response_santes_aliment_catalogue_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_response.dart';
 
 class FrontShoppingApi {
 

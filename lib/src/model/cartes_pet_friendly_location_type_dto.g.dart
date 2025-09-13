@@ -26,6 +26,8 @@ const CartesPetFriendlyLocationTypeDto _$villageVacances =
     const CartesPetFriendlyLocationTypeDto._('villageVacances');
 const CartesPetFriendlyLocationTypeDto _$cafe =
     const CartesPetFriendlyLocationTypeDto._('cafe');
+const CartesPetFriendlyLocationTypeDto _$centreAntiPoison =
+    const CartesPetFriendlyLocationTypeDto._('centreAntiPoison');
 
 CartesPetFriendlyLocationTypeDto _$valueOf(String name) {
   switch (name) {
@@ -49,6 +51,8 @@ CartesPetFriendlyLocationTypeDto _$valueOf(String name) {
       return _$villageVacances;
     case 'cafe':
       return _$cafe;
+    case 'centreAntiPoison':
+      return _$centreAntiPoison;
     default:
       throw ArgumentError(name);
   }
@@ -66,6 +70,7 @@ final BuiltSet<CartesPetFriendlyLocationTypeDto> _$values = BuiltSet<
   _$caniparc,
   _$villageVacances,
   _$cafe,
+  _$centreAntiPoison,
 ]);
 
 class _$CartesPetFriendlyLocationTypeDtoMeta {
@@ -80,6 +85,7 @@ class _$CartesPetFriendlyLocationTypeDtoMeta {
   CartesPetFriendlyLocationTypeDto get caniparc => _$caniparc;
   CartesPetFriendlyLocationTypeDto get villageVacances => _$villageVacances;
   CartesPetFriendlyLocationTypeDto get cafe => _$cafe;
+  CartesPetFriendlyLocationTypeDto get centreAntiPoison => _$centreAntiPoison;
   CartesPetFriendlyLocationTypeDto valueOf(String name) => _$valueOf(name);
   BuiltSet<CartesPetFriendlyLocationTypeDto> get values => _$values;
 }
@@ -107,6 +113,7 @@ class _$CartesPetFriendlyLocationTypeDtoSerializer
     'caniparc': 'Caniparc',
     'villageVacances': 'VillageVacances',
     'cafe': 'Cafe',
+    'centreAntiPoison': 'CentreAntiPoison',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'NotSet': 'notSet',
@@ -119,6 +126,7 @@ class _$CartesPetFriendlyLocationTypeDtoSerializer
     'Caniparc': 'caniparc',
     'VillageVacances': 'villageVacances',
     'Cafe': 'cafe',
+    'CentreAntiPoison': 'centreAntiPoison',
   };
 
   @override

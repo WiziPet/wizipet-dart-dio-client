@@ -4,14 +4,15 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
-import 'package:wizipet_api/src/model/list_response_profiles_pet_race_item_dto.dart';
 import 'package:wizipet_api/src/model/profiles_other_profiles_list_dto.dart';
 import 'package:wizipet_api/src/model/profiles_patch_profile_dto.dart';
 import 'package:wizipet_api/src/model/profiles_pet_profile_request.dart';
+import 'package:wizipet_api/src/model/wp_list_response_profiles_pet_race_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_create_reply_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_profiles_my_profile_item_dto.dart';
@@ -837,9 +838,9 @@ class FrontProfileApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseProfilesPetRaceItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseProfilesPetRaceItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseProfilesPetRaceItemDto>> apiV1FrontRacesGet({ 
+  Future<Response<WpListResponseProfilesPetRaceItemDto>> apiV1FrontRacesGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -874,14 +875,14 @@ class FrontProfileApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseProfilesPetRaceItemDto? _responseData;
+    WpListResponseProfilesPetRaceItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseProfilesPetRaceItemDto),
-      ) as ListResponseProfilesPetRaceItemDto;
+        specifiedType: const FullType(WpListResponseProfilesPetRaceItemDto),
+      ) as WpListResponseProfilesPetRaceItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -893,7 +894,7 @@ class FrontProfileApi {
       );
     }
 
-    return Response<ListResponseProfilesPetRaceItemDto>(
+    return Response<WpListResponseProfilesPetRaceItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

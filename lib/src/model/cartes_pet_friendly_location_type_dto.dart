@@ -31,6 +31,8 @@ class CartesPetFriendlyLocationTypeDto extends EnumClass {
   static const CartesPetFriendlyLocationTypeDto villageVacances = _$villageVacances;
   @BuiltValueEnumConst(wireName: r'Cafe')
   static const CartesPetFriendlyLocationTypeDto cafe = _$cafe;
+  @BuiltValueEnumConst(wireName: r'CentreAntiPoison')
+  static const CartesPetFriendlyLocationTypeDto centreAntiPoison = _$centreAntiPoison;
 
   static Serializer<CartesPetFriendlyLocationTypeDto> get serializer => _$cartesPetFriendlyLocationTypeDtoSerializer;
 

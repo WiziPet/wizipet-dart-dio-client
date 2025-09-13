@@ -76,7 +76,7 @@ abstract class PlacesExpediaHotelItemDto implements Built<PlacesExpediaHotelItem
 
   @BuiltValueField(wireName: r'type')
   CartesPetFriendlyLocationTypeDto? get type;
-  // enum typeEnum {  NotSet,  Hotel,  Maison,  Appartement,  Camping,  Restaurant,  Plage,  Caniparc,  VillageVacances,  Cafe,  };
+  // enum typeEnum {  NotSet,  Hotel,  Maison,  Appartement,  Camping,  Restaurant,  Plage,  Caniparc,  VillageVacances,  Cafe,  CentreAntiPoison,  };
 
   @BuiltValueField(wireName: r'id')
   String? get id;

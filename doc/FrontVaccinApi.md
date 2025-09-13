@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontProfilePetIdSantesVaccinationsGet**
-> ListResponseVaccinsVaccinationItemDto apiV1FrontProfilePetIdSantesVaccinationsGet(petId)
+> WpListResponseVaccinsVaccinationItemDto apiV1FrontProfilePetIdSantesVaccinationsGet(petId)
 
 
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseVaccinsVaccinationItemDto**](ListResponseVaccinsVaccinationItemDto.md)
+[**WpListResponseVaccinsVaccinationItemDto**](WpListResponseVaccinsVaccinationItemDto.md)
 
 ### Authorization
 

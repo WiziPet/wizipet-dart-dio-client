@@ -4,12 +4,13 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
 import 'package:wizipet_api/src/model/accueil_assistant_personnel_type_dto.dart';
-import 'package:wizipet_api/src/model/list_response_accueil_assistant_personnel_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_accueil_assistant_personnel_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_system_int32.dart';
 
@@ -33,9 +34,9 @@ class FrontAccueilApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseAccueilAssistantPersonnelItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseAccueilAssistantPersonnelItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseAccueilAssistantPersonnelItemDto>> apiV1FrontProfilePetIdAccueilAssistantPersonnelGet({ 
+  Future<Response<WpListResponseAccueilAssistantPersonnelItemDto>> apiV1FrontProfilePetIdAccueilAssistantPersonnelGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -71,14 +72,14 @@ class FrontAccueilApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseAccueilAssistantPersonnelItemDto? _responseData;
+    WpListResponseAccueilAssistantPersonnelItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseAccueilAssistantPersonnelItemDto),
-      ) as ListResponseAccueilAssistantPersonnelItemDto;
+        specifiedType: const FullType(WpListResponseAccueilAssistantPersonnelItemDto),
+      ) as WpListResponseAccueilAssistantPersonnelItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -90,7 +91,7 @@ class FrontAccueilApi {
       );
     }
 
-    return Response<ListResponseAccueilAssistantPersonnelItemDto>(
+    return Response<WpListResponseAccueilAssistantPersonnelItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

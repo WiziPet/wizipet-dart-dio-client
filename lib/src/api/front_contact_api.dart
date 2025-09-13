@@ -4,12 +4,13 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
-import 'package:wizipet_api/src/model/list_response_contacts_contact_summary_dto.dart';
 import 'package:wizipet_api/src/model/resumable_list_response_publications_publication_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_contacts_contact_summary_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_system_int32.dart';
 
@@ -202,9 +203,9 @@ class FrontContactApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseContactsContactSummaryDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseContactsContactSummaryDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseContactsContactSummaryDto>> apiV1FrontProfilePetIdContactSummaryGet({ 
+  Future<Response<WpListResponseContactsContactSummaryDto>> apiV1FrontProfilePetIdContactSummaryGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -240,14 +241,14 @@ class FrontContactApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseContactsContactSummaryDto? _responseData;
+    WpListResponseContactsContactSummaryDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseContactsContactSummaryDto),
-      ) as ListResponseContactsContactSummaryDto;
+        specifiedType: const FullType(WpListResponseContactsContactSummaryDto),
+      ) as WpListResponseContactsContactSummaryDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -259,7 +260,7 @@ class FrontContactApi {
       );
     }
 
-    return Response<ListResponseContactsContactSummaryDto>(
+    return Response<WpListResponseContactsContactSummaryDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

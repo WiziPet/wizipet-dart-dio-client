@@ -4,16 +4,12 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:wizipet_api/src/api_util.dart';
-import 'package:wizipet_api/src/model/list_response_santes_company_assurance_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_infos_medicales_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_operation_item_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_pathologie_dto.dart';
-import 'package:wizipet_api/src/model/list_response_santes_sickness_item_dto.dart';
 import 'package:wizipet_api/src/model/santes_clef_info_dto.dart';
 import 'package:wizipet_api/src/model/santes_set_assurance_dto.dart';
 import 'package:wizipet_api/src/model/santes_set_identifiant_dto.dart';
@@ -23,6 +19,11 @@ import 'package:wizipet_api/src/model/santes_set_physio_dto.dart';
 import 'package:wizipet_api/src/model/santes_set_sickness_dto.dart';
 import 'package:wizipet_api/src/model/santes_set_sterilisation_dto.dart';
 import 'package:wizipet_api/src/model/santes_set_veterinaire_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_company_assurance_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_infos_medicales_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_operation_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_pathologie_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_santes_sickness_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_create_reply_dto.dart';
 import 'package:wizipet_api/src/model/wp_response_santes_assurance_dto.dart';
@@ -57,9 +58,9 @@ class FrontSanteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseSantesCompanyAssuranceDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseSantesCompanyAssuranceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseSantesCompanyAssuranceDto>> apiV1FrontCompanyAssurancesGet({ 
+  Future<Response<WpListResponseSantesCompanyAssuranceDto>> apiV1FrontCompanyAssurancesGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -94,14 +95,14 @@ class FrontSanteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseSantesCompanyAssuranceDto? _responseData;
+    WpListResponseSantesCompanyAssuranceDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseSantesCompanyAssuranceDto),
-      ) as ListResponseSantesCompanyAssuranceDto;
+        specifiedType: const FullType(WpListResponseSantesCompanyAssuranceDto),
+      ) as WpListResponseSantesCompanyAssuranceDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -113,7 +114,7 @@ class FrontSanteApi {
       );
     }
 
-    return Response<ListResponseSantesCompanyAssuranceDto>(
+    return Response<WpListResponseSantesCompanyAssuranceDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -136,9 +137,9 @@ class FrontSanteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseSantesPathologieDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseSantesPathologieDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseSantesPathologieDto>> apiV1FrontPathologiesGet({ 
+  Future<Response<WpListResponseSantesPathologieDto>> apiV1FrontPathologiesGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -173,14 +174,14 @@ class FrontSanteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseSantesPathologieDto? _responseData;
+    WpListResponseSantesPathologieDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseSantesPathologieDto),
-      ) as ListResponseSantesPathologieDto;
+        specifiedType: const FullType(WpListResponseSantesPathologieDto),
+      ) as WpListResponseSantesPathologieDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -192,7 +193,7 @@ class FrontSanteApi {
       );
     }
 
-    return Response<ListResponseSantesPathologieDto>(
+    return Response<WpListResponseSantesPathologieDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1025,9 +1026,9 @@ class FrontSanteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseSantesInfosMedicalesItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseSantesInfosMedicalesItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseSantesInfosMedicalesItemDto>> apiV1FrontProfilePetIdSantesInfosmedicalesGet({ 
+  Future<Response<WpListResponseSantesInfosMedicalesItemDto>> apiV1FrontProfilePetIdSantesInfosmedicalesGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1063,14 +1064,14 @@ class FrontSanteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseSantesInfosMedicalesItemDto? _responseData;
+    WpListResponseSantesInfosMedicalesItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseSantesInfosMedicalesItemDto),
-      ) as ListResponseSantesInfosMedicalesItemDto;
+        specifiedType: const FullType(WpListResponseSantesInfosMedicalesItemDto),
+      ) as WpListResponseSantesInfosMedicalesItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1082,7 +1083,7 @@ class FrontSanteApi {
       );
     }
 
-    return Response<ListResponseSantesInfosMedicalesItemDto>(
+    return Response<WpListResponseSantesInfosMedicalesItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1106,9 +1107,9 @@ class FrontSanteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseSantesOperationItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseSantesOperationItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseSantesOperationItemDto>> apiV1FrontProfilePetIdSantesOperationGet({ 
+  Future<Response<WpListResponseSantesOperationItemDto>> apiV1FrontProfilePetIdSantesOperationGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1144,14 +1145,14 @@ class FrontSanteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseSantesOperationItemDto? _responseData;
+    WpListResponseSantesOperationItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseSantesOperationItemDto),
-      ) as ListResponseSantesOperationItemDto;
+        specifiedType: const FullType(WpListResponseSantesOperationItemDto),
+      ) as WpListResponseSantesOperationItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1163,7 +1164,7 @@ class FrontSanteApi {
       );
     }
 
-    return Response<ListResponseSantesOperationItemDto>(
+    return Response<WpListResponseSantesOperationItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1743,9 +1744,9 @@ class FrontSanteApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseSantesSicknessItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseSantesSicknessItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseSantesSicknessItemDto>> apiV1FrontProfilePetIdSantesSicknessGet({ 
+  Future<Response<WpListResponseSantesSicknessItemDto>> apiV1FrontProfilePetIdSantesSicknessGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1781,14 +1782,14 @@ class FrontSanteApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseSantesSicknessItemDto? _responseData;
+    WpListResponseSantesSicknessItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseSantesSicknessItemDto),
-      ) as ListResponseSantesSicknessItemDto;
+        specifiedType: const FullType(WpListResponseSantesSicknessItemDto),
+      ) as WpListResponseSantesSicknessItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -1800,7 +1801,7 @@ class FrontSanteApi {
       );
     }
 
-    return Response<ListResponseSantesSicknessItemDto>(
+    return Response<WpListResponseSantesSicknessItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

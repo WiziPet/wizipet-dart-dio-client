@@ -4,12 +4,14 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
 import 'package:wizipet_api/src/model/medical_assistants_assistant_query_dto.dart';
 import 'package:wizipet_api/src/model/medical_assistants_assistant_reply_dto.dart';
+import 'package:wizipet_api/src/model/wp_response.dart';
 
 class FrontMedicalAssistantApi {
 

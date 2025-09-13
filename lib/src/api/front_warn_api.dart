@@ -4,11 +4,12 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
-import 'package:wizipet_api/src/model/list_response_warns_warn_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_warns_warn_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 
 class FrontWarnApi {
@@ -31,9 +32,9 @@ class FrontWarnApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseWarnsWarnItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseWarnsWarnItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseWarnsWarnItemDto>> apiV1FrontProfilePetIdWarnsGet({ 
+  Future<Response<WpListResponseWarnsWarnItemDto>> apiV1FrontProfilePetIdWarnsGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -69,14 +70,14 @@ class FrontWarnApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseWarnsWarnItemDto? _responseData;
+    WpListResponseWarnsWarnItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseWarnsWarnItemDto),
-      ) as ListResponseWarnsWarnItemDto;
+        specifiedType: const FullType(WpListResponseWarnsWarnItemDto),
+      ) as WpListResponseWarnsWarnItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -88,7 +89,7 @@ class FrontWarnApi {
       );
     }
 
-    return Response<ListResponseWarnsWarnItemDto>(
+    return Response<WpListResponseWarnsWarnItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

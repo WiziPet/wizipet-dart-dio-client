@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontProfilePetIdHistoriquesActiviteGet**
-> ListResponseSantesHistoriqueDto apiV1FrontProfilePetIdHistoriquesActiviteGet(petId)
+> WpListResponseSantesHistoriqueDto apiV1FrontProfilePetIdHistoriquesActiviteGet(petId)
 
 
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseSantesHistoriqueDto**](ListResponseSantesHistoriqueDto.md)
+[**WpListResponseSantesHistoriqueDto**](WpListResponseSantesHistoriqueDto.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdHistoriquesAlimentationsGet**
-> ListResponseSantesHistoriqueDto apiV1FrontProfilePetIdHistoriquesAlimentationsGet(petId)
+> WpListResponseSantesHistoriqueDto apiV1FrontProfilePetIdHistoriquesAlimentationsGet(petId)
 
 
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseSantesHistoriqueDto**](ListResponseSantesHistoriqueDto.md)
+[**WpListResponseSantesHistoriqueDto**](WpListResponseSantesHistoriqueDto.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdHistoriquesPoidsGet**
-> ListResponseSantesHistoriqueDto apiV1FrontProfilePetIdHistoriquesPoidsGet(petId)
+> WpListResponseSantesHistoriqueDto apiV1FrontProfilePetIdHistoriquesPoidsGet(petId)
 
 
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseSantesHistoriqueDto**](ListResponseSantesHistoriqueDto.md)
+[**WpListResponseSantesHistoriqueDto**](WpListResponseSantesHistoriqueDto.md)
 
 ### Authorization
 

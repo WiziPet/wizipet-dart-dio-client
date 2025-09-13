@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontProfilePetIdSantesVermifugesMedicamentationsGet**
-> ListResponseSantesMedicamentationItemDto apiV1FrontProfilePetIdSantesVermifugesMedicamentationsGet(petId)
+> WpListResponseSantesMedicamentationItemDto apiV1FrontProfilePetIdSantesVermifugesMedicamentationsGet(petId)
 
 
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseSantesMedicamentationItemDto**](ListResponseSantesMedicamentationItemDto.md)
+[**WpListResponseSantesMedicamentationItemDto**](WpListResponseSantesMedicamentationItemDto.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontVermifugesGet**
-> ListResponseVermifugesVermifugeDto apiV1FrontVermifugesGet()
+> WpListResponseVermifugesVermifugeDto apiV1FrontVermifugesGet()
 
 
 
@@ -176,7 +176,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ListResponseVermifugesVermifugeDto**](ListResponseVermifugesVermifugeDto.md)
+[**WpListResponseVermifugesVermifugeDto**](WpListResponseVermifugesVermifugeDto.md)
 
 ### Authorization
 

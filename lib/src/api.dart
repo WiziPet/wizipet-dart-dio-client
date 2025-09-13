@@ -37,6 +37,7 @@ import 'package:wizipet_api/src/api/front_vaccin_api.dart';
 import 'package:wizipet_api/src/api/front_vermifuge_api.dart';
 import 'package:wizipet_api/src/api/front_version_api.dart';
 import 'package:wizipet_api/src/api/front_warn_api.dart';
+import 'package:wizipet_api/src/api/media_api.dart';
 
 class WizipetApi {
   static const String basePath = r'http://localhost';
@@ -258,5 +259,11 @@ class WizipetApi {
   /// by doing that all interceptors will not be executed
   FrontWarnApi getFrontWarnApi() {
     return FrontWarnApi(dio, serializers);
+  }
+
+  /// Get MediaApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  MediaApi getMediaApi() {
+    return MediaApi(dio, serializers);
   }
 }

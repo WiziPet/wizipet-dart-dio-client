@@ -26,7 +26,7 @@ part 'cartes_pet_friendly_location_item_dto.g.dart';
 abstract class CartesPetFriendlyLocationItemDto implements Built<CartesPetFriendlyLocationItemDto, CartesPetFriendlyLocationItemDtoBuilder> {
   @BuiltValueField(wireName: r'type')
   CartesPetFriendlyLocationTypeDto? get type;
-  // enum typeEnum {  NotSet,  Hotel,  Maison,  Appartement,  Camping,  Restaurant,  Plage,  Caniparc,  VillageVacances,  Cafe,  };
+  // enum typeEnum {  NotSet,  Hotel,  Maison,  Appartement,  Camping,  Restaurant,  Plage,  Caniparc,  VillageVacances,  Cafe,  CentreAntiPoison,  };
 
   @BuiltValueField(wireName: r'id')
   String? get id;

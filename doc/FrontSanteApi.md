@@ -39,7 +39,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontCompanyAssurancesGet**
-> ListResponseSantesCompanyAssuranceDto apiV1FrontCompanyAssurancesGet()
+> WpListResponseSantesCompanyAssuranceDto apiV1FrontCompanyAssurancesGet()
 
 
 
@@ -64,7 +64,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ListResponseSantesCompanyAssuranceDto**](ListResponseSantesCompanyAssuranceDto.md)
+[**WpListResponseSantesCompanyAssuranceDto**](WpListResponseSantesCompanyAssuranceDto.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontPathologiesGet**
-> ListResponseSantesPathologieDto apiV1FrontPathologiesGet()
+> WpListResponseSantesPathologieDto apiV1FrontPathologiesGet()
 
 
 
@@ -103,7 +103,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ListResponseSantesPathologieDto**](ListResponseSantesPathologieDto.md)
+[**WpListResponseSantesPathologieDto**](WpListResponseSantesPathologieDto.md)
 
 ### Authorization
 
@@ -514,7 +514,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdSantesInfosmedicalesGet**
-> ListResponseSantesInfosMedicalesItemDto apiV1FrontProfilePetIdSantesInfosmedicalesGet(petId)
+> WpListResponseSantesInfosMedicalesItemDto apiV1FrontProfilePetIdSantesInfosmedicalesGet(petId)
 
 
 
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseSantesInfosMedicalesItemDto**](ListResponseSantesInfosMedicalesItemDto.md)
+[**WpListResponseSantesInfosMedicalesItemDto**](WpListResponseSantesInfosMedicalesItemDto.md)
 
 ### Authorization
 
@@ -557,7 +557,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdSantesOperationGet**
-> ListResponseSantesOperationItemDto apiV1FrontProfilePetIdSantesOperationGet(petId)
+> WpListResponseSantesOperationItemDto apiV1FrontProfilePetIdSantesOperationGet(petId)
 
 
 
@@ -586,7 +586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseSantesOperationItemDto**](ListResponseSantesOperationItemDto.md)
+[**WpListResponseSantesOperationItemDto**](WpListResponseSantesOperationItemDto.md)
 
 ### Authorization
 
@@ -868,7 +868,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdSantesSicknessGet**
-> ListResponseSantesSicknessItemDto apiV1FrontProfilePetIdSantesSicknessGet(petId)
+> WpListResponseSantesSicknessItemDto apiV1FrontProfilePetIdSantesSicknessGet(petId)
 
 
 
@@ -897,7 +897,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseSantesSicknessItemDto**](ListResponseSantesSicknessItemDto.md)
+[**WpListResponseSantesSicknessItemDto**](WpListResponseSantesSicknessItemDto.md)
 
 ### Authorization
 

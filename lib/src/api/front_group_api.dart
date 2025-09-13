@@ -4,6 +4,7 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
@@ -11,7 +12,7 @@ import 'package:wizipet_api/src/api_util.dart';
 import 'package:wizipet_api/src/model/groups_create_group_dto.dart';
 import 'package:wizipet_api/src/model/groups_group_dto.dart';
 import 'package:wizipet_api/src/model/groups_update_group_dto.dart';
-import 'package:wizipet_api/src/model/list_response_groups_group_item_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_groups_group_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 
 class FrontGroupApi {
@@ -137,9 +138,9 @@ class FrontGroupApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseGroupsGroupItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseGroupsGroupItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseGroupsGroupItemDto>> apiV1FrontProfilePetIdGroupsGet({ 
+  Future<Response<WpListResponseGroupsGroupItemDto>> apiV1FrontProfilePetIdGroupsGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -175,14 +176,14 @@ class FrontGroupApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseGroupsGroupItemDto? _responseData;
+    WpListResponseGroupsGroupItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseGroupsGroupItemDto),
-      ) as ListResponseGroupsGroupItemDto;
+        specifiedType: const FullType(WpListResponseGroupsGroupItemDto),
+      ) as WpListResponseGroupsGroupItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -194,7 +195,7 @@ class FrontGroupApi {
       );
     }
 
-    return Response<ListResponseGroupsGroupItemDto>(
+    return Response<WpListResponseGroupsGroupItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

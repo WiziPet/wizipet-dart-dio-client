@@ -4,6 +4,7 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
@@ -14,8 +15,8 @@ import 'package:wizipet_api/src/model/discussions_is_archived_dto.dart';
 import 'package:wizipet_api/src/model/discussions_patch_discussion_dto.dart';
 import 'package:wizipet_api/src/model/discussions_post_message_dto.dart';
 import 'package:wizipet_api/src/model/discussions_put_message_read_dto.dart';
-import 'package:wizipet_api/src/model/list_response_discussions_discussion_item_dto.dart';
 import 'package:wizipet_api/src/model/resumable_list_response_discussions_message_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_discussions_discussion_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_discussions_discussion_dto.dart';
 
@@ -798,9 +799,9 @@ class FrontDiscussionApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseDiscussionsDiscussionItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseDiscussionsDiscussionItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseDiscussionsDiscussionItemDto>> apiV1FrontProfilePetIdDiscussionsGet({ 
+  Future<Response<WpListResponseDiscussionsDiscussionItemDto>> apiV1FrontProfilePetIdDiscussionsGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -836,14 +837,14 @@ class FrontDiscussionApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseDiscussionsDiscussionItemDto? _responseData;
+    WpListResponseDiscussionsDiscussionItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseDiscussionsDiscussionItemDto),
-      ) as ListResponseDiscussionsDiscussionItemDto;
+        specifiedType: const FullType(WpListResponseDiscussionsDiscussionItemDto),
+      ) as WpListResponseDiscussionsDiscussionItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -855,7 +856,7 @@ class FrontDiscussionApi {
       );
     }
 
-    return Response<ListResponseDiscussionsDiscussionItemDto>(
+    return Response<WpListResponseDiscussionsDiscussionItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -33,7 +33,7 @@ abstract class CartesPostPetFriendlyLocationParamDto implements Built<CartesPost
 
   @BuiltValueField(wireName: r'type')
   CartesPetFriendlyLocationTypeDto? get type;
-  // enum typeEnum {  NotSet,  Hotel,  Maison,  Appartement,  Camping,  Restaurant,  Plage,  Caniparc,  VillageVacances,  Cafe,  };
+  // enum typeEnum {  NotSet,  Hotel,  Maison,  Appartement,  Camping,  Restaurant,  Plage,  Caniparc,  VillageVacances,  Cafe,  CentreAntiPoison,  };
 
   @BuiltValueField(wireName: r'image_id_list')
   BuiltSet<String>? get imageIdList;

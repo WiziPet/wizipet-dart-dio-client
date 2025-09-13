@@ -4,13 +4,14 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:wizipet_api/src/api_util.dart';
-import 'package:wizipet_api/src/model/list_response_vaccins_vaccination_item_dto.dart';
 import 'package:wizipet_api/src/model/vaccins_patch_vaccination_dto.dart';
 import 'package:wizipet_api/src/model/vaccins_post_vaccination_dto.dart';
+import 'package:wizipet_api/src/model/wp_list_response_vaccins_vaccination_item_dto.dart';
 import 'package:wizipet_api/src/model/wp_response.dart';
 import 'package:wizipet_api/src/model/wp_response_vaccins_list_vaccin_dto.dart';
 
@@ -34,9 +35,9 @@ class FrontVaccinApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [ListResponseVaccinsVaccinationItemDto] as data
+  /// Returns a [Future] containing a [Response] with a [WpListResponseVaccinsVaccinationItemDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ListResponseVaccinsVaccinationItemDto>> apiV1FrontProfilePetIdSantesVaccinationsGet({ 
+  Future<Response<WpListResponseVaccinsVaccinationItemDto>> apiV1FrontProfilePetIdSantesVaccinationsGet({ 
     required String petId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -72,14 +73,14 @@ class FrontVaccinApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ListResponseVaccinsVaccinationItemDto? _responseData;
+    WpListResponseVaccinsVaccinationItemDto? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(ListResponseVaccinsVaccinationItemDto),
-      ) as ListResponseVaccinsVaccinationItemDto;
+        specifiedType: const FullType(WpListResponseVaccinsVaccinationItemDto),
+      ) as WpListResponseVaccinsVaccinationItemDto;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -91,7 +92,7 @@ class FrontVaccinApi {
       );
     }
 
-    return Response<ListResponseVaccinsVaccinationItemDto>(
+    return Response<WpListResponseVaccinsVaccinationItemDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

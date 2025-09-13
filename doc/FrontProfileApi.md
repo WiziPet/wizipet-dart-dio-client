@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontRacesGet**
-> ListResponseProfilesPetRaceItemDto apiV1FrontRacesGet()
+> WpListResponseProfilesPetRaceItemDto apiV1FrontRacesGet()
 
 
 
@@ -446,7 +446,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ListResponseProfilesPetRaceItemDto**](ListResponseProfilesPetRaceItemDto.md)
+[**WpListResponseProfilesPetRaceItemDto**](WpListResponseProfilesPetRaceItemDto.md)
 
 ### Authorization
 

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **apiV1FrontProfilePetIdSantesPensebetesGet**
-> ListResponsePenseBetesPenseBeteItemDto apiV1FrontProfilePetIdSantesPensebetesGet(petId)
+> WpListResponsePenseBetesPenseBeteItemDto apiV1FrontProfilePetIdSantesPensebetesGet(petId)
 
 
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponsePenseBetesPenseBeteItemDto**](ListResponsePenseBetesPenseBeteItemDto.md)
+[**WpListResponsePenseBetesPenseBeteItemDto**](WpListResponsePenseBetesPenseBeteItemDto.md)
 
 ### Authorization
 

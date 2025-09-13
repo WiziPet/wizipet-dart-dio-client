@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **apiV1FrontProfilePetIdGroupsGet**
-> ListResponseGroupsGroupItemDto apiV1FrontProfilePetIdGroupsGet(petId)
+> WpListResponseGroupsGroupItemDto apiV1FrontProfilePetIdGroupsGet(petId)
 
 
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListResponseGroupsGroupItemDto**](ListResponseGroupsGroupItemDto.md)
+[**WpListResponseGroupsGroupItemDto**](WpListResponseGroupsGroupItemDto.md)
 
 ### Authorization
 
