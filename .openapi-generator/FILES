@@ -625,4 +625,3 @@ lib/src/model/wp_response_versions_version_dto.dart
 lib/src/serializers.dart
 lib/wizipet_api.dart
 pubspec.yaml
-test/media_api_test.dart
