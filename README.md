@@ -65,7 +65,9 @@ void main(List<String> arguments) async {
   try {
     final authResponse = await apiClient
       .getFrontAuthApi()
-      .apiV1FrontAuthLoginPost(authLoginUserRequest);
+      .apiV1FrontAuthLoginPost(
+        authLoginUserRequest: authLoginUserRequest
+      );
     
     print('Login success: $authResponse');
     
